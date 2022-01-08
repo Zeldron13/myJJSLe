@@ -43,3 +43,27 @@ function pow2(x, n) {
 // getDigits();
 // alert(pow(a,b));
 // alert(pow2(a,b));
+
+// function ask(question, yes, no){
+//     if(confirm(question)) yes();
+//     else no();
+// }
+
+// function showOk() {
+//     alert('Вы согласны');
+// }
+// function showCancel(){
+//     alert('ВЫ отменили выполнение!');
+// }
+// ask("Вы согласны?", showOk, showCancel)
+
+
+function ask(question, yes, no){
+    if(confirm(question)) yes()
+    else no();
+}
+ask(
+    "Вы соглавсны?",
+    function() {alert('Вы согласились!');},
+    function() {alert('Вы отменили выполнение!');}
+)
