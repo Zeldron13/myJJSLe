@@ -58,12 +58,23 @@ function pow2(x, n) {
 // ask("Вы согласны?", showOk, showCancel)
 
 
-function ask(question, yes, no){
-    if(confirm(question)) yes()
+// function ask(question, yes, no){
+//     if(confirm(question)) yes()
+//     else no();
+// }
+// ask(
+//     "Вы соглавсны?",
+//     function() {alert('Вы согласились!');},
+//     function() {alert('Вы отменили выполнение!');}
+// )
+
+function aask = (question, yes, no) => {
+    if(confirm(question)) yes();
     else no();
-}
-ask(
-    "Вы соглавсны?",
-    function() {alert('Вы согласились!');},
-    function() {alert('Вы отменили выполнение!');}
-)
+};
+
+aask(
+    "Вы согласны?",
+    () => alert('Вы согласились!'),
+    () => alert('Вы отменили выполнение!')
+    );
