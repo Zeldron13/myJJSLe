@@ -1,21 +1,45 @@
 "use struct";
 
-let num = prompt("Ваш браузер", "Chrome");
+function checkAge(age){
 
-switch(+num){
-    case 0: 
-        alert("0");
-        break;
+    return (age > 18) ? true : confirm('Родители разрешили?');
+    return (age > 18) || confirm('Родители разрешили?');
+    if (age>18){
+        return true;
+    } else {
+        return confirm('Родители разрешили?');
+    }
+}// console.log(checkAge(9));
 
-    case 1: 
-        alert("1");
-        break;
+function min(a,b){
+    return (a>b) ? b : a 
+}//console.log(min(22,44));
 
-    case 2: 
-    case 3: 
-        alert("2-3");
-        break;
-    default:
-        alert("NaN")
+
+let a, b;
+function getDigits(){
     
+    while(true){
+        a = prompt("Введите первое число");
+        if(a>0 && a != null) break;
+    }
+    while(true){
+        b = prompt("Введите второе число");
+        if(b>0 && b != null) break;
+    }
 }
+function pow(x,n){
+    return x ** n;
+}
+function pow2(x, n) {
+    let result = x;
+  
+    for (let i = 1; i < n; i++) {
+      result *= x;
+    }
+  
+    return result;
+}
+// getDigits();
+// alert(pow(a,b));
+// alert(pow2(a,b));
