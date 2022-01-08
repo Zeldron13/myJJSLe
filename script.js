@@ -1,22 +1,21 @@
 "use struct";
 
-let num = 10;
+let num = prompt("Ваш браузер", "Chrome");
 
-out:
-for(let i = 2; i <= num; i++){
-    for(let j = 2; j < i; j++){
-        if(i % j == 0) continue out;
-    }
-    alert(`Простое ${i}`);
+switch(+num){
+    case 0: 
+        alert("0");
+        break;
+
+    case 1: 
+        alert("1");
+        break;
+
+    case 2: 
+    case 3: 
+        alert("2-3");
+        break;
+    default:
+        alert("NaN")
+    
 }
-// let n = 10;
-
-// nextPrime:
-// for (let i = 2; i <= n; i++) { // Для всех i...
-
-//   for (let j = 2; j < i; j++) { // проверить, делится ли число..
-//     if (i % j == 0) continue nextPrime; // не подходит, берём следующее
-//   }
-
-//   alert( i ); // простое число
-// }
