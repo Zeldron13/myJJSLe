@@ -68,8 +68,11 @@ function pow2(x, n) {
 //     function() {alert('Вы отменили выполнение!');}
 // )
 
-function aask = (question, yes, no) => {
-    if(confirm(question)) yes();
+let aask = (question, yes, no) => {
+    if(confirm(question)) {
+        debugger;
+         yes();
+    }
     else no();
 };
 
