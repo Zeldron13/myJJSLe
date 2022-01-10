@@ -68,16 +68,99 @@ function pow2(x, n) {
 //     function() {alert('Вы отменили выполнение!');}
 // )
 
-let aask = (question, yes, no) => {
-    if(confirm(question)) {
-        debugger;
-         yes();
+// let aask = (question, yes, no) => {
+//     if(confirm(question)) {
+//         debugger;
+//          yes();
+//     }
+//     else no();
+// };
+
+// aask(
+//     "Вы согласны?",
+//     () => alert('Вы согласились!'),
+//     () => alert('Вы отменили выполнение!')
+//     );
+
+/* ОБЪЕКТЫ */
+
+
+// let user = {
+
+
+//     name: "John",
+//     age: 30,
+//     isAdmin: true
+// };
+// user.surname = "Smith";
+// user.name = "Pete";
+// for (let key in user) {
+//     alert(`Prop: ${key} = ` + user[key]);
+// }
+
+
+// let obj = {};
+// alert(obj);
+// function isEmpty(obj){
+//     for (let key in obj) {
+//         return  false; 
+//     }
+//     return true;      
+// }
+// alert(isEmpty(obj));
+
+
+// while(true) {
+//     let property = prompt("какое свойство хотите получить?", "admin, name, age");
+//     if(property == undefined) break;
+//     debugger;
+//     if(property == "admin") property = "isAdmin";
+//     alert("Свойство: " + user[property]);
+// }
+// alert(user.name);
+// alert(user.age);
+// alert(user.isAdmin);
+
+let salarie = {
+    John: 100,
+    Ann: 160,
+    Pete: 130,
+}
+
+let sum = (obj) =>{
+    let sumValue = 0;
+    for (let key in salarie) {
+        sumValue += salarie[key];
     }
-    else no();
+    return sumValue;
+
 };
 
-aask(
-    "Вы согласны?",
-    () => alert('Вы согласились!'),
-    () => alert('Вы отменили выполнение!')
-    );
+// alert(sum(salarie));
+
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu",
+}
+
+
+function multiplyNumeric(obj){
+    for (let key in obj) {
+        if(typeof obj[key] == 'number') obj[key] *= 2;
+    }
+}
+
+function showMenu(obj){
+    for (let key in obj) {
+        alert(obj[key]);
+    }
+}
+
+showMenu(menu);
+multiplyNumeric(menu);
+showMenu(menu);
+
+
+
+
