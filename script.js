@@ -157,10 +157,73 @@ function showMenu(obj){
     }
 }
 
-showMenu(menu);
-multiplyNumeric(menu);
-showMenu(menu);
+// showMenu(menu);
+// multiplyNumeric(menu);
+// showMenu(menu);
 
 
 
 
+
+// let user = {
+//     name: "Джон",
+//     age: 30,
+
+//     sayHI() {
+//         alert(this.name);
+//     }
+// };
+
+// user.sayHI();
+
+
+
+// let user = {
+//     name: "Джон",
+//     go: function() { alert(this.name) }
+//  };
+  
+// (user.go)()
+
+// *** this
+
+// let calculator = {
+
+//     read: function() {
+//         this.a = +prompt("Введите первое значение!", "5");
+//         this.b = +prompt("Введите второе значение!", "4");
+//     },
+
+//     sum: function() {
+//         return this.a + this.b;
+//     },
+
+//     mul: function(){
+      
+//         return this.a * this.b;
+//     },
+// };
+
+// calculator.read();
+// alert(calculator.sum());
+// alert(calculator.mul());
+
+let ladder = {
+    step: 0,
+    up() {
+        this.step++;
+        return this;
+        
+    },
+    down() {
+        this.step--;
+        return this;
+    },
+    showStep: function() {
+        alert(this.step);
+        return this;
+    }
+
+};
+
+ladder.up().up().down().showStep();
